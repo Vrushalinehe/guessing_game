@@ -1,3 +1,4 @@
+make README.md
 function guess {
 
 	no_of_files=$(ls | wc -w)
@@ -22,4 +23,4 @@ function guess {
 	done
 }
 guess
-make README.md
+

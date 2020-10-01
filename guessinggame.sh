@@ -24,3 +24,4 @@ function guess {
 }
 guess
 
+make

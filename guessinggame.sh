@@ -23,5 +23,4 @@ function guess {
 	done
 }
 guess
-
-make
+make 

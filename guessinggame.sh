@@ -9,7 +9,7 @@ function guess {
 	do
 		echo "Guess no of files"
 		read n
-		
+
 		if [[ $n -eq $no_of_files ]]
 		then 
 			echo "Congratulations!You guessed it right."
@@ -24,4 +24,4 @@ function guess {
 }
 guess
 
-make
+make -B -f Makefile

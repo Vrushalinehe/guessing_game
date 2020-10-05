@@ -1,4 +1,6 @@
 # Guessing Game
-Created on: Mon Oct  5 10:28:35 IST 2020
+Date : 10/05/20
+ 
+Time : 10:40:56  IST
  
 Lines of code: 40

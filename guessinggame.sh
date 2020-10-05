@@ -7,18 +7,30 @@ function guess {
 
 	while [[ $flag -eq 0 ]]
 	do
-		echo "Guess no of files"
+		echo "Guess how many files are in the current directory?"
 		read n
+		n1=$(echo "$no_of_files / 2" | bc)
+		n2=$(echo "$no_of_files * 2" | bc)
 
 		if [[ $n -eq $no_of_files ]]
 		then 
 			echo "Congratulations!You guessed it right."
 			let flag=$flag+1
-		elif [[ $n -gt $no_of_files ]]
+		elif [[ $n -ge $n2 ]]
 		then
-			echo "Guessed high"
+			echo "The guess was too high"
+			echo "TRY AGAIN"
+		elif [[ $n -le $n1 ]]
+		then
+			echo "The guess was too low"
+			echo "TRY AGAIN"
+		elif [[ $n -lt $no_of_files && $n -gt $n1 ]]
+		then
+			echo "The guess was low"
+			echo "TRY AGAIN"
 		else
-			echo "Guessed low"
+			echo "The guess was high"
+			echo "TRY AGAIN"
 		fi
 	done
 }
